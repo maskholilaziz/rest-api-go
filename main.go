@@ -28,6 +28,9 @@ func main()  {
 	// membuat route store post
 	router.POST("/api/posts", controllers.StorePost)
 
+	// membuat route detail post
+	router.GET("/api/posts/:id", controllers.FindPostById)
+
 	// mulai server dengan port 3000
 	router.Run(":3000")
 }
